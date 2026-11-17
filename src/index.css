@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-golos {
+    font-family: 'Golos Text', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  .font-serif-display {
+    font-family: 'Instrument Serif', Georgia, serif;
+  }
+  .font-manrope {
+    font-family: 'Manrope', sans-serif;
+  }
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+  .gpu-layer {
+    will-change: transform, opacity;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+  .smooth-transition {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+}
+
+/* Custom Sleek Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #edeceb;
+}
+::-webkit-scrollbar-thumb {
+  background: #c9c5bd;
+  border-radius: 9999px;
+  border: 2px solid #edeceb;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d64918;
+}
+
+/* Keyframe for ticker */
+@keyframes ticker {
+  0% {
+    transform: translate3d(0%, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-ticker {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: ticker 32s linear infinite;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.animate-ticker:hover {
+  animation-play-state: paused;
+}
+
+html {
+  scroll-behavior: auto !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Smooth transitions setup */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Lenis Smooth Scroll Core Styles */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}

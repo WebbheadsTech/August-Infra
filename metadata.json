@@ -1,0 +1,8 @@
+{
+  "name": "August Infra | Housing, Infrastructure & layouts",
+  "description": "August Infra is a premier general contracting & layout development firm delivering housing, infrastructure, civil bridges, and commercial interiors.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
